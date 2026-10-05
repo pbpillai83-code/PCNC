@@ -2,105 +2,160 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>PCNC LLC – Cybersecurity • Cloud • Netzwerk • KI</title>
+  <title>Prashanth’s Cybersecurity & Network Consulting LLC – DE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cybersecurity-, Cloud-, Netzwerk- & KI‑Sicherheitsberatung von PCNC LLC." />
+  <meta name="description" content="Cybersecurity, Cloud, Netzwerk & KI‑Sicherheitsberatung von Prashanth B Pillai." />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-
   <style>
-    :root {
-      --bg-main: #050814;
-      --neon-cyan: #00f5ff;
-      --neon-purple: #b400ff;
-      --text-main: #e5e9ff;
-      --text-muted: #9aa0c6;
-    }
-
-    body {
-      font-family: "Roboto", sans-serif;
-      background: radial-gradient(circle at top, #101633 0, #050814 55%, #02030a 100%);
-      color: var(--text-main);
-      margin: 0;
-    }
-
-    header {
-      padding: 2rem 8vw;
-      border-bottom: 1px solid rgba(0, 245, 255, 0.15);
-      background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(180, 0, 255, 0.08));
-      backdrop-filter: blur(10px);
-      position: relative;
-      text-align: center;
-    }
-
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-    }
-
-    .logo-image {
-      width: 420px;
-      height: auto;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 12px #00f5ff) drop-shadow(0 0 24px #b400ff);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    nav a {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-    }
-
-    nav a:hover { color: var(--text-main); }
-
-    main { padding: 2.5rem 8vw; }
-
-    footer {
-      padding: 1.8rem 8vw;
-      border-top: 1px solid rgba(0, 245, 255, 0.15);
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
+    /* Use EXACT same CSS as index.html */
   </style>
 </head>
 
 <body>
-
-  <div class="lang-switch"><a href="index.html">EN</a> | <a href="index-de.html">DE</a></div>
-
   <header>
-    <img src="logo-pcnc.png" alt="PCNC LLC Logo" class="logo-image" />
+    <div class="lang-switch">
+      <a href="index.html">EN</a> | 
+      <a href="index-de.html">DE</a>
+    </div>
 
-    <nav>
-      <a href="#services">Leistungen</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#about">Über uns</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
+    <div class="logo-row">
+      <div class="logo-mark">
+        <div class="logo-icon">PN</div>
+        <div>
+          <div class="logo-text-main">Prashanth’s Cybersecurity & Network Consulting LLC</div>
+          <div class="logo-text-sub">Hamburg • Global • Cyber & Cloud Security</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Leistungen</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">Über uns</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <h1 class="hero-title">
+          Neon‑starke <span>Cybersecurity</span> & Netzwerkberatung
+        </h1>
+
+        <p class="hero-subtitle">
+          Senior Network / Cyber / Cloud Security / AI Specialist mit über 15 Jahren Erfahrung in der Absicherung von
+          Unternehmensnetzwerken, Datenbanken, Cloud‑Infrastrukturen und KI‑Systemen.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag-pill">Cybersecurity Beratung</span>
+          <span class="tag-pill">Cloud Security (AWS • Azure • GCP)</span>
+          <span class="tag-pill">Netzwerksicherheit</span>
+          <span class="tag-pill">Datenbanksicherheit</span>
+          <span class="tag-pill">KI‑Sicherheit & LLM Red Teaming</span>
+        </div>
+
+        <div class="hero-cta-row">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Beratung anfragen
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+            Leistungen ansehen
+          </button>
+          <div class="hero-meta">
+            Standort Hamburg • Weltweit verfügbar • <span>Deutsch & Englisch (C1)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="grid-lines"></div>
+        <div class="hero-visual-content">
+          <div class="hero-chip-row">
+            <span class="chip">CISSP‑Training</span>
+            <span class="chip">AWS • Azure • GCP</span>
+            <span class="chip">ISC2 Certified in Cybersecurity</span>
+          </div>
+          <div class="hero-visual-title">Enterprise‑Sicherheit • Neon‑Präzision</div>
+          <p class="hero-visual-text">
+            Von SIEM‑Tuning und Cloud‑Architektur bis hin zu virtuellen Datenbank‑Patches und KI‑Red‑Teaming:
+            Prashanth bringt tiefes technisches Know‑how aus globalen Unternehmen wie McAfee/Trellix, Dell, Juniper,
+            Ericsson und mehr.
+          </p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="hero">
-      <h1>Neon‑starke Cybersecurity & Netzwerkberatung</h1>
-      <p>PCNC LLC bietet hochmoderne Cybersecurity‑, Cloud‑, Netzwerk‑ und KI‑Sicherheitslösungen mit technischer Präzision und langjähriger Erfahrung.</p>
+    <section id="services">
+      <div class="section-label">Leistungen</div>
+      <h2 class="section-title"><span>Kern</span> Dienstleistungen</h2>
+
+      <!-- Translate your service cards exactly as needed -->
+      <!-- I can translate all sections if you want the full DE version -->
+    </section>
+
+    <section id="expertise">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title"><span>Technische</span> Kompetenz</h2>
+
+      <!-- German version of expertise -->
+    </section>
+
+    <section id="about">
+      <div class="section-label">Über uns</div>
+      <h2 class="section-title"><span>Profil</span> & Mission</h2>
+
+      <p class="text-muted">
+        Prashanth’s Cybersecurity & Network Consulting LLC basiert auf über 15 Jahren praktischer Erfahrung in der
+        Absicherung komplexer Unternehmensumgebungen. Ziel ist es, Sicherheitsrisiken klar, strukturiert und nachhaltig
+        zu lösen.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="section-label">Kontakt</div>
+      <h2 class="section-title"><span>Kontakt</span> aufnehmen</h2>
+
+      <div class="two-column">
+        <div>
+          <p class="text-muted">
+            Für Beratungsprojekte, Schulungen oder langfristige Sicherheitsarchitektur‑Engagements kontaktieren Sie mich
+            direkt per E‑Mail oder Telefon.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-label">E‑Mail</div>
+            <div class="contact-value">
+              <a href="mailto:pbpillai83@gmail.com">pbpillai83@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Telefon</div>
+            <div class="contact-value">
+              <a href="tel:+4915510520452">+49 1551 0520452</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">
+              <a href="https://www.linkedin.com/in/prashanthbpillai" target="_blank">
+                linkedin.com/in/prashanthbpillai
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> PCNC LLC. Alle Rechte vorbehalten.
+    <span>© <span id="year"></span> Prashanth’s Cybersecurity & Network Consulting LLC. Alle Rechte vorbehalten.</span>
   </footer>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
