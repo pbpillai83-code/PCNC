@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <title>PCNC LLC – Cybersecurity • Cloud • Network • AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Prashanth’s Cybersecurity & Network Consulting LLC – Cybersecurity, Cloud, Network & AI Security Consulting." />
+  <meta name="description" content="Cybersecurity, Cloud, Network & AI Security Consulting by PCNC LLC." />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
       --bg-main: #050814;
@@ -14,19 +15,23 @@
       --text-main: #e5e9ff;
       --text-muted: #9aa0c6;
     }
+
     body {
       font-family: "Roboto", sans-serif;
       background: radial-gradient(circle at top, #101633 0, #050814 55%, #02030a 100%);
       color: var(--text-main);
       margin: 0;
     }
+
     header {
       padding: 2rem 8vw;
       border-bottom: 1px solid rgba(0, 245, 255, 0.15);
       background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(180, 0, 255, 0.08));
       backdrop-filter: blur(10px);
       position: relative;
+      text-align: center;
     }
+
     .lang-switch {
       position: absolute;
       top: 20px;
@@ -34,29 +39,31 @@
       font-size: 0.85rem;
       letter-spacing: 0.12em;
     }
+
     .logo-image {
-      width: 220px;
+      width: 420px;
       height: auto;
+      margin-bottom: 1rem;
       filter: drop-shadow(0 0 12px #00f5ff) drop-shadow(0 0 24px #b400ff);
-      animation: neonPulse 3s infinite ease-in-out;
     }
-    @keyframes neonPulse {
-      0%, 100% { filter: drop-shadow(0 0 8px #00f5ff) drop-shadow(0 0 16px #b400ff); }
-      50% { filter: drop-shadow(0 0 16px #00f5ff) drop-shadow(0 0 32px #b400ff); }
-    }
+
     nav {
       display: flex;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-      justify-content: flex-end;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
     }
+
     nav a {
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--text-muted);
     }
+
     nav a:hover { color: var(--text-main); }
+
     main { padding: 2.5rem 8vw; }
+
     footer {
       padding: 1.8rem 8vw;
       border-top: 1px solid rgba(0, 245, 255, 0.15);
@@ -66,11 +73,14 @@
     }
   </style>
 </head>
+
 <body>
+
   <div class="lang-switch"><a href="index.html">EN</a> | <a href="index-de.html">DE</a></div>
 
   <header>
-    <img src="assets/logo-pcnc.png" alt="PCNC LLC Logo" class="logo-image" />
+    <img src="logo-pcnc.png" alt="PCNC LLC Logo" class="logo-image" />
+
     <nav>
       <a href="#services">Services</a>
       <a href="#expertise">Expertise</a>
@@ -82,15 +92,15 @@
   <main>
     <section id="hero">
       <h1>Neon‑Grade Cybersecurity & Network Consulting</h1>
-      <p>Senior Network / Cyber / Cloud Security / AI Specialist with 15+ years of experience securing enterprise networks, databases, cloud infrastructures and AI systems.</p>
+      <p>PCNC LLC delivers enterprise‑grade cybersecurity, cloud architecture, network engineering and AI security solutions with precision and deep technical expertise.</p>
     </section>
-    <!-- Add your existing sections here -->
   </main>
 
   <footer>
-    © <span id="year"></span> Prashanth’s Cybersecurity & Network Consulting LLC. All rights reserved.
+    © <span id="year"></span> PCNC LLC. All rights reserved.
   </footer>
 
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
 </body>
 </html>
