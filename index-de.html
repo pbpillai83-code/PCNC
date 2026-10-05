@@ -2,44 +2,31 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Prashanth’s Cybersecurity & Network Consulting LLC – Deutsch</title>
+  <title>PCNC LLC – Cybersecurity • Cloud • Netzwerk • KI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cybersecurity, Cloud, Netzwerk & KI‑Sicherheitsberatung von Prashanth B Pillai." />
+  <meta name="description" content="Prashanth’s Cybersecurity & Network Consulting LLC – Beratung für Cybersecurity, Cloud, Netzwerk & KI‑Sicherheit." />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-
   <style>
-    /* --- SAME NEON CSS AS ENGLISH VERSION --- */
     :root {
       --bg-main: #050814;
-      --bg-alt: #0b1020;
       --neon-cyan: #00f5ff;
       --neon-purple: #b400ff;
-      --neon-pink: #ff2fbf;
       --text-main: #e5e9ff;
       --text-muted: #9aa0c6;
-      --accent: #00f5ff;
     }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      font-family: "Roboto", system-ui, sans-serif;
+      font-family: "Roboto", sans-serif;
       background: radial-gradient(circle at top, #101633 0, #050814 55%, #02030a 100%);
       color: var(--text-main);
-      line-height: 1.6;
+      margin: 0;
     }
-
-    a { color: var(--neon-cyan); text-decoration: none; }
-    a:hover { text-shadow: 0 0 8px var(--neon-cyan); }
-
     header {
-      padding: 2.5rem 8vw 3rem;
+      padding: 2rem 8vw;
       border-bottom: 1px solid rgba(0, 245, 255, 0.15);
       background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(180, 0, 255, 0.08));
       backdrop-filter: blur(10px);
       position: relative;
     }
-
     .lang-switch {
       position: absolute;
       top: 20px;
@@ -47,383 +34,61 @@
       font-size: 0.85rem;
       letter-spacing: 0.12em;
     }
-
-    .logo-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
+    .logo-image {
+      width: 220px;
+      height: auto;
+      filter: drop-shadow(0 0 12px #00f5ff) drop-shadow(0 0 24px #b400ff);
+      animation: neonPulse 3s infinite ease-in-out;
     }
-
-    .logo-mark {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
+    @keyframes neonPulse {
+      0%, 100% { filter: drop-shadow(0 0 8px #00f5ff) drop-shadow(0 0 16px #b400ff); }
+      50% { filter: drop-shadow(0 0 16px #00f5ff) drop-shadow(0 0 32px #b400ff); }
     }
-
-    .logo-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 2px solid var(--neon-cyan);
-      box-shadow: 0 0 12px rgba(0, 245, 255, 0.8), 0 0 24px rgba(180, 0, 255, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: "Orbitron";
-      font-size: 0.9rem;
-      color: var(--neon-cyan);
-    }
-
-    .logo-text-main {
-      font-family: "Orbitron";
-      font-size: 1.1rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
     nav {
       display: flex;
       gap: 1.5rem;
       font-size: 0.9rem;
+      justify-content: flex-end;
     }
-
     nav a {
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      font-size: 0.8rem;
       color: var(--text-muted);
-      position: relative;
     }
-
     nav a:hover { color: var(--text-main); }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 2fr 1.8fr;
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    .hero-title {
-      font-family: "Orbitron";
-      font-size: 2.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 1rem;
-    }
-
-    .hero-title span {
-      color: var(--neon-cyan);
-      text-shadow: 0 0 12px rgba(0, 245, 255, 0.8);
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-    }
-
-    .tag-pill {
-      border-radius: 999px;
-      border: 1px solid rgba(0, 245, 255, 0.4);
-      padding: 0.35rem 0.8rem;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--neon-cyan);
-      background: rgba(0, 245, 255, 0.12);
-      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
-    }
-
-    .btn-primary {
-      padding: 0.7rem 1.4rem;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 245, 255, 0.8);
-      background: radial-gradient(circle at top left, var(--neon-cyan), var(--neon-purple));
-      color: #050814;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      cursor: pointer;
-    }
-
-    .btn-secondary {
-      padding: 0.7rem 1.2rem;
-      border-radius: 999px;
-      border: 1px solid rgba(180, 0, 255, 0.7);
-      background: rgba(5, 8, 20, 0.9);
-      color: var(--neon-purple);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      cursor: pointer;
-    }
-
-    main { padding: 2.5rem 8vw 3rem; }
-    section { margin-bottom: 3rem; }
-
-    .section-title {
-      font-family: "Orbitron";
-      font-size: 1.4rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 1.4rem;
-    }
-
-    .section-title span { color: var(--neon-cyan); }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.6rem;
-    }
-
-    .service-card {
-      border-radius: 16px;
-      padding: 1.3rem;
-      background: rgba(11, 16, 32, 0.95);
-      border: 1px solid rgba(0, 245, 255, 0.18);
-    }
-
-    .service-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 0.4rem;
-    }
-
-    .service-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-bottom: 0.6rem;
-    }
-
-    .service-list { list-style: none; font-size: 0.8rem; }
-    .service-list li { margin-bottom: 0.25rem; }
-
+    main { padding: 2.5rem 8vw; }
     footer {
       padding: 1.8rem 8vw;
       border-top: 1px solid rgba(0, 245, 255, 0.15);
       font-size: 0.75rem;
       color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
+      text-align: center;
     }
   </style>
 </head>
-
 <body>
+  <div class="lang-switch"><a href="index.html">EN</a> | <a href="index-de.html">DE</a></div>
 
-  <!-- LANGUAGE SWITCH -->
-  <div class="lang-switch">
-    <a href="index.html">EN</a> | <a href="index-de.html">DE</a>
-  </div>
-
-  <!-- HEADER -->
   <header>
-    <div class="logo-row">
-      <div class="logo-mark">
-        <div class="logo-icon">PN</div>
-        <div>
-          <div class="logo-text-main">Prashanth’s Cybersecurity & Network Consulting LLC</div>
-          <div class="logo-text-sub">Hamburg • Global • Cyber & Cloud Security</div>
-        </div>
-      </div>
-
-      <nav>
-        <a href="#services">Leistungen</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#about">Über uns</a>
-        <a href="#contact">Kontakt</a>
-      </nav>
-    </div>
-
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <h1 class="hero-title">
-          Neon‑starke <span>Cybersecurity</span> & Netzwerkberatung
-        </h1>
-
-        <p class="hero-subtitle">
-          Senior Network / Cyber / Cloud Security / AI Specialist mit über 15 Jahren Erfahrung in der Absicherung von
-          Unternehmensnetzwerken, Datenbanken, Cloud‑Infrastrukturen und KI‑Systemen.
-        </p>
-
-        <div class="hero-tags">
-          <span class="tag-pill">Cybersecurity Beratung</span>
-          <span class="tag-pill">Cloud Security (AWS • Azure • GCP)</span>
-          <span class="tag-pill">Netzwerksicherheit</span>
-          <span class="tag-pill">Datenbanksicherheit</span>
-          <span class="tag-pill">KI‑Sicherheit & LLM Red Teaming</span>
-        </div>
-
-        <div class="hero-cta-row">
-          <button class="btn-primary">Beratung anfragen</button>
-          <button class="btn-secondary">Leistungen ansehen</button>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-chip-row">
-          <span class="chip">CISSP‑Training</span>
-          <span class="chip">AWS • Azure • GCP</span>
-          <span class="chip">ISC2 Certified in Cybersecurity</span>
-        </div>
-
-        <div class="hero-visual-title">Enterprise‑Sicherheit • Neon‑Präzision</div>
-
-        <p class="hero-visual-text">
-          Von SIEM‑Tuning und Cloud‑Architektur über virtuelle Datenbank‑Patches bis hin zu KI‑Red‑Teaming:
-          Prashanth bringt tiefes technisches Know‑how aus globalen Unternehmen wie McAfee/Trellix, Dell, Juniper,
-          Ericsson und weiteren internationalen Technologiepartnern.
-        </p>
-      </div>
-    </div>
+    <img src="assets/logo-pcnc.png" alt="PCNC LLC Logo" class="logo-image" />
+    <nav>
+      <a href="#services">Leistungen</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#about">Über uns</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
   <main>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <h2 class="section-title"><span>Kern</span> Dienstleistungen</h2>
-
-      <div class="services-grid">
-
-        <!-- Cybersecurity -->
-        <div class="service-card">
-          <div class="service-title">Cybersecurity Beratung & Risikoabwehr</div>
-          <div class="service-sub">Ganzheitliche Sicherheitsanalysen und risikobasierte Maßnahmen.</div>
-          <ul class="service-list">
-            <li>Bedrohungsanalyse & Angriffsflächenbewertung</li>
-            <li>SIEM‑Optimierung & Sicherheitskontrollen</li>
-            <li>GDPR, PCI‑DSS, HIPAA, CIS Benchmarks</li>
-            <li>Incident Response & Eskalationsmanagement</li>
-            <li>ISO 27001, NIS2, DORA, IEC 62443</li>
-          </ul>
-        </div>
-
-        <!-- Cloud -->
-        <div class="service-card">
-          <div class="service-title">Cloud‑Sicherheitsarchitektur (AWS • Azure • GCP)</div>
-          <div class="service-sub">Sichere, skalierbare Multi‑Cloud‑Architekturen.</div>
-          <ul class="service-list">
-            <li>Cloud‑Netzwerkdesign & Hybrid‑Architektur</li>
-            <li>VPC Peering, Direct Connect, ExpressRoute</li>
-            <li>NSGs, NACLs, IAM‑Härtung</li>
-            <li>Terraform / CloudFormation Sicherheit</li>
-            <li>CloudWatch, Azure Monitor, Log Analytics</li>
-          </ul>
-        </div>
-
-        <!-- Network -->
-        <div class="service-card">
-          <div class="service-title">Netzwerk‑Sicherheitsengineering</div>
-          <div class="service-sub">Carrier‑Grade & Enterprise‑Netzwerksicherheit.</div>
-          <ul class="service-list">
-            <li>Firewall‑Design (Cisco, SonicWall, Fortinet, Palo Alto)</li>
-            <li>IPSec VPN, SSL VPN, Remote Access</li>
-            <li>OSPF, BGP, MPLS, ISIS, EVPN, VXLAN</li>
-            <li>Traffic‑Flow‑Analyse</li>
-            <li>AAA, RADIUS/TACACS+</li>
-          </ul>
-        </div>
-
-        <!-- Database -->
-        <div class="service-card">
-          <div class="service-title">Datenbanksicherheit & Virtuelles Patchen</div>
-          <div class="service-sub">CVE‑Analyse, Reverse Engineering & virtuelle Patches.</div>
-          <ul class="service-list">
-            <li>Datenbank‑Schwachstellenanalyse</li>
-            <li>Virtuelle Patch‑Signaturen</li>
-            <li>IDA Pro, Ghidra, Oradiff</li>
-            <li>Oracle, MSSQL, MySQL, PostgreSQL, DB2, SAP HANA</li>
-            <li>Angriffsminderung & Richtlinien</li>
-          </ul>
-        </div>
-
-        <!-- AI -->
-        <div class="service-card">
-          <div class="service-title">KI‑Sicherheit & LLM Red Teaming</div>
-          <div class="service-sub">Adversarial Testing für KI‑Systeme.</div>
-          <ul class="service-list">
-            <li>LLM‑Red‑Teaming</li>
-            <li>Systemlecks & Privilegieneskalation</li>
-            <li>Sicheres Prompt Engineering</li>
-            <li>KI‑Governance</li>
-            <li>RAG‑Chatbots (AWS Bedrock)</li>
-          </ul>
-        </div>
-
-        <!-- DevSecOps -->
-        <div class="service-card">
-          <div class="service-title">DevSecOps & Sichere Softwareentwicklung</div>
-          <div class="service-sub">Sicherheit in CI/CD‑Pipelines & Code.</div>
-          <ul class="service-list">
-            <li>Sicheres SDLC</li>
-            <li>CI/CD‑Sicherheit (Jenkins)</li>
-            <li>Code‑Review (C++, Java, Python)</li>
-            <li>Reverse Engineering</li>
-            <li>Dokumentation & Wissensvermittlung</li>
-          </ul>
-        </div>
-
-        <!-- Training -->
-        <div class="service-card">
-          <div class="service-title">Cybersecurity Schulungen & Workshops</div>
-          <div class="service-sub">Trainings für Unternehmen & Hochschulen.</div>
-          <ul class="service-list">
-            <li>Cybersecurity, Linux, Netzwerkgrundlagen</li>
-            <li>Cloud‑Security (AWS, Azure, GCP)</li>
-            <li>Datenbanksicherheit & SIEM</li>
-            <li>Curriculum‑Design</li>
-            <li>Mentoring technischer Teams</li>
-          </ul>
-        </div>
-
-        <!-- Support -->
-        <div class="service-card">
-          <div class="service-title">Technischer Support & Eskalationsberatung</div>
-          <div class="service-sub">Hochkritische Incident‑Bearbeitung.</div>
-          <ul class="service-list">
-            <li>L3‑Support für SIEM & Datenbanksicherheit</li>
-            <li>RCA‑Analyse & Fix‑Validierung</li>
-            <li>MTTR‑Optimierung</li>
-            <li>Notfall‑Wiederherstellung</li>
-            <li>Knowledge‑Base‑Erstellung</li>
-          </ul>
-        </div>
-
-      </div>
+    <section id="hero">
+      <h1>Neon‑starke Cybersecurity & Netzwerkberatung</h1>
+      <p>Senior Network / Cyber / Cloud Security / KI‑Spezialist mit über 15 Jahren Erfahrung in der Absicherung von Unternehmensnetzwerken, Datenbanken, Cloud‑Infrastrukturen und KI‑Systemen.</p>
     </section>
+    <!-- Add your existing sections here -->
+  </main>
 
-    <!-- EXPERTISE -->
-    <section id="expertise">
-      <h2 class="section-title"><span>Technische</span> Expertise</h2>
+  <footer>
+    © <span id="year"></span> Prashanth’s Cybersecurity & Network Consulting LLC. Alle Rechte vorbehalten.
+  </footer>
 
-      <p class="text-muted">
-        Prashanth kombiniert praktische Engineering‑Erfahrung mit globalen Technologie‑Ökosystemen und modernen
-        Sicherheitsstandards. Sein Hintergrund umfasst McAfee/Trellix Database Security & SIEM, Dell SonicWall NGFW,
-        Juniper Carrier‑Routing, Ericsson SmartEdge sowie Multi‑Cloud‑Sicherheit über AWS, Azure und GCP.
-      </p>
-
-      <ul class="service-list">
-        <li>Cyber Security & Risiko: SIEM, Schwachstellenforschung, Bedrohungsanalyse</li>
-        <li>Datenbank‑ & Anwendungssicherheit</li>
-        <li>Netzwerk‑ & Infrastruktursicherheit</li>
-        <li>Cloud‑Sicherheit: AWS, Azure, GCP</li>
-        <li>Compliance: GDPR, PCI‑DSS, HIPAA, CIS Benchmarks</li>
-        <li>Frameworks: ISO 27001, IEC 62443, NIS2, DORA, MITRE ATT&CK, OWASP Top 10</li>
-      </ul>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2 class="section-title"><span>Über</span> uns</h2>
-
-      <p class="text-muted">
-        Prashanth’s
+  <
