@@ -1,6 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCNC LLC — Cybersecurity • Cloud • Network • AI</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      background: #0a0a0f;
+      color: #e0e0ff;
+      font-family: "Orbitron", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(90deg, #0a0a0f, #111122);
+      border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-area img {
+      height: 90px;
+      width: auto;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #8beaff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #b57bff;
+    }
+
+    .lang-switch {
+      margin-left: 25px;
+      color: #b57bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-area">
+    <!-- Logo is in root folder -->
+    <img src="logo-pcnc.png" alt="PCNC LLC Logo" />
+    <div>
+      <div style="font-size: 1.4rem; font-weight: 700;">Prashanth’s Cybersecurity & Network Consulting LLC</div>
+      <div style="font-size: 0.9rem; opacity: 0.8;">Cybersecurity • Cloud • Network • AI</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+    <a href="index-de.html" class="lang-switch">DE 🇩🇪</a>
+  </nav>
+</header>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
   <div class="lang-switch">
   <a href="index.html">EN</a> | 
   <a href="index-de.html">DE</a>
@@ -794,4 +871,6 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
+</html>
+  </body>
 </html>
