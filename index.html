@@ -2,105 +2,774 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>PCNC LLC – Cybersecurity • Cloud • Network • AI</title>
+  <title>Prashanth’s Cybersecurity & Network Consulting LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cybersecurity, Cloud, Network & AI Security Consulting by PCNC LLC." />
+  <meta name="description" content="Cybersecurity, Cloud, Network & AI Security Consulting by Prashanth B Pillai." />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
-
   <style>
     :root {
       --bg-main: #050814;
+      --bg-alt: #0b1020;
       --neon-cyan: #00f5ff;
       --neon-purple: #b400ff;
+      --neon-pink: #ff2fbf;
       --text-main: #e5e9ff;
       --text-muted: #9aa0c6;
+      --accent: #00f5ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: "Roboto", sans-serif;
+      font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: radial-gradient(circle at top, #101633 0, #050814 55%, #02030a 100%);
       color: var(--text-main);
-      margin: 0;
+      line-height: 1.6;
     }
 
+    a {
+      color: var(--neon-cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-shadow: 0 0 8px var(--neon-cyan);
+    }
+
+    /* Layout */
     header {
-      padding: 2rem 8vw;
+      position: relative;
+      padding: 2.5rem 8vw 3rem;
       border-bottom: 1px solid rgba(0, 245, 255, 0.15);
       background: linear-gradient(135deg, rgba(0, 245, 255, 0.08), rgba(180, 0, 255, 0.08));
       backdrop-filter: blur(10px);
-      position: relative;
-      text-align: center;
     }
 
-    .lang-switch {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 0.85rem;
+    .logo-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 2px solid var(--neon-cyan);
+      box-shadow:
+        0 0 12px rgba(0, 245, 255, 0.8),
+        0 0 24px rgba(180, 0, 255, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.9rem;
+      color: var(--neon-cyan);
+    }
+
+    .logo-text-main {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.1rem;
       letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .logo-image {
-      width: 420px;
-      height: auto;
-      margin-bottom: 1rem;
-      filter: drop-shadow(0 0 12px #00f5ff) drop-shadow(0 0 24px #b400ff);
+    .logo-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
 
     nav {
       display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
+      gap: 1.5rem;
+      font-size: 0.9rem;
     }
 
     nav a {
+      position: relative;
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
-    nav a:hover { color: var(--text-main); }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.3rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+      transition: width 0.25s ease-out;
+    }
 
-    main { padding: 2.5rem 8vw; }
+    nav a:hover {
+      color: var(--text-main);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .hero-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(2.1rem, 3vw, 2.6rem);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--neon-cyan);
+      text-shadow: 0 0 12px rgba(0, 245, 255, 0.8);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .tag-pill {
+      border-radius: 999px;
+      border: 1px solid rgba(0, 245, 255, 0.4);
+      padding: 0.35rem 0.8rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--neon-cyan);
+      background: radial-gradient(circle, rgba(0, 245, 255, 0.12), rgba(5, 8, 20, 0.9));
+      box-shadow: 0 0 10px rgba(0, 245, 255, 0.4);
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 245, 255, 0.8);
+      background: radial-gradient(circle at top left, var(--neon-cyan), var(--neon-purple));
+      color: #050814;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      box-shadow:
+        0 0 16px rgba(0, 245, 255, 0.8),
+        0 0 26px rgba(180, 0, 255, 0.7);
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.08);
+    }
+
+    .btn-secondary {
+      padding: 0.7rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(180, 0, 255, 0.7);
+      background: rgba(5, 8, 20, 0.9);
+      color: var(--neon-purple);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .hero-meta span {
+      color: var(--neon-cyan);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 220px;
+      border-radius: 18px;
+      padding: 1.4rem;
+      background: radial-gradient(circle at top, rgba(0, 245, 255, 0.12), rgba(5, 8, 20, 0.95));
+      border: 1px solid rgba(0, 245, 255, 0.25);
+      box-shadow:
+        0 0 24px rgba(0, 245, 255, 0.4),
+        0 0 40px rgba(180, 0, 255, 0.35);
+      overflow: hidden;
+    }
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 245, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 245, 255, 0.08) 1px, transparent 1px);
+      background-size: 26px 26px;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .hero-visual-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 47, 191, 0.7);
+      color: var(--neon-pink);
+      background: rgba(5, 8, 20, 0.9);
+    }
+
+    .hero-visual-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.6rem;
+      color: var(--neon-cyan);
+    }
+
+    .hero-visual-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    main {
+      padding: 2.5rem 8vw 3rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-title span {
+      color: var(--neon-cyan);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.6rem;
+    }
+
+    .service-card {
+      border-radius: 16px;
+      padding: 1.3rem 1.2rem;
+      background: linear-gradient(145deg, rgba(11, 16, 32, 0.95), rgba(5, 8, 20, 0.98));
+      border: 1px solid rgba(0, 245, 255, 0.18);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top left, rgba(0, 245, 255, 0.12), transparent 60%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .service-icon {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: var(--neon-cyan);
+    }
+
+    .service-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-sub {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .service-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: var(--text-main);
+    }
+
+    .service-list li {
+      margin-bottom: 0.25rem;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .service-list li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--neon-cyan);
+      font-size: 0.7rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    .contact-card {
+      border-radius: 16px;
+      padding: 1.4rem 1.3rem;
+      background: linear-gradient(145deg, rgba(11, 16, 32, 0.95), rgba(5, 8, 20, 0.98));
+      border: 1px solid rgba(180, 0, 255, 0.4);
+      box-shadow:
+        0 0 18px rgba(180, 0, 255, 0.4),
+        0 0 26px rgba(0, 245, 255, 0.3);
+    }
+
+    .contact-row {
+      margin-bottom: 0.6rem;
+      font-size: 0.85rem;
+    }
+
+    .contact-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    .contact-value {
+      color: var(--text-main);
+    }
 
     footer {
-      padding: 1.8rem 8vw;
+      padding: 1.8rem 8vw 2.2rem;
       border-top: 1px solid rgba(0, 245, 255, 0.15);
       font-size: 0.75rem;
       color: var(--text-muted);
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    footer span {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+      header, main, footer {
+        padding-left: 6vw;
+        padding-right: 6vw;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
-
 <body>
-
-  <div class="lang-switch"><a href="index.html">EN</a> | <a href="index-de.html">DE</a></div>
-
   <header>
-    <img src="logo-pcnc.png" alt="PCNC LLC Logo" class="logo-image" />
+    <div class="logo-row">
+      <div class="logo-mark">
+        <div class="logo-icon">PN</div>
+        <div>
+          <div class="logo-text-main">Prashanth’s Cybersecurity & Network Consulting LLC</div>
+          <div class="logo-text-sub">Hamburg • Global • Cyber & Cloud Security</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
 
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="hero">
+      <div>
+        <h1 class="hero-title">
+          Neon‑Grade <span>Cybersecurity</span> & Network Consulting
+        </h1>
+        <p class="hero-subtitle">
+          Senior Network / Cyber / Cloud Security / AI Specialist with 15+ years of experience securing enterprise networks,
+          databases, cloud infrastructures and AI systems. Focused on architecting and protecting systems, data and business
+          continuity at scale.
+        </p>
+        <div class="hero-tags">
+          <span class="tag-pill">Cybersecurity Consulting</span>
+          <span class="tag-pill">Cloud Security (AWS • Azure • GCP)</span>
+          <span class="tag-pill">Network Security Engineering</span>
+          <span class="tag-pill">Database Security & Virtual Patching</span>
+          <span class="tag-pill">AI Security & LLM Red Teaming</span>
+        </div>
+        <div class="hero-cta-row">
+          <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            Request a Consultation
+          </button>
+          <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+            View Services
+          </button>
+          <div class="hero-meta">
+            Based in Hamburg • Serving clients worldwide • <span>English & German (C1)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="grid-lines"></div>
+        <div class="hero-visual-content">
+          <div class="hero-chip-row">
+            <span class="chip">CISSP‑trained</span>
+            <span class="chip">AWS • Azure • GCP</span>
+            <span class="chip">ISC2 Certified in Cybersecurity</span>
+          </div>
+          <div class="hero-visual-title">Enterprise‑Grade Security • Neon Precision</div>
+          <p class="hero-visual-text">
+            From SIEM tuning and cloud security architecture to database virtual patching and AI red teaming, Prashanth
+            brings deep technical judgment and hands‑on experience across global vendors including McAfee/Trellix, Dell,
+            Juniper, Ericsson and more.
+          </p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="hero">
-      <h1>Neon‑Grade Cybersecurity & Network Consulting</h1>
-      <p>PCNC LLC delivers enterprise‑grade cybersecurity, cloud architecture, network engineering and AI security solutions with precision and deep technical expertise.</p>
+    <section id="services">
+      <div class="section-label">Services</div>
+      <h2 class="section-title"><span>Core</span> Consulting Offerings</h2>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">🔐</div>
+          <div class="service-title">Cybersecurity Consulting & Risk Defense</div>
+          <div class="service-sub">
+            Holistic security posture assessments and risk‑driven remediation for modern enterprise environments.
+          </div>
+          <ul class="service-list">
+            <li>Threat analysis, attack surface assessment & risk identification</li>
+            <li>Security controls validation and SIEM content tuning</li>
+            <li>Compliance coverage for GDPR, PCI‑DSS, HIPAA, CIS Benchmarks</li>
+            <li>Incident response planning and escalation management</li>
+            <li>Implementation guidance for ISO 27001, NIS2, DORA, IEC 62443</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">☁️</div>
+          <div class="service-title">Cloud Security Architecture (AWS • Azure • GCP)</div>
+          <div class="service-sub">
+            Secure, scalable multi‑cloud architectures with hardened connectivity and identity controls.
+          </div>
+          <ul class="service-list">
+            <li>Design of secure cloud networking and hybrid connectivity</li>
+            <li>VPC peering, Direct Connect, ExpressRoute, ELB/GWLB</li>
+            <li>NSGs, NACLs, IAM hardening and segmentation strategies</li>
+            <li>Terraform / CloudFormation security patterns</li>
+            <li>Monitoring via CloudWatch, Azure Monitor, Log Analytics</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🛡️</div>
+          <div class="service-title">Network Security Engineering</div>
+          <div class="service-sub">
+            Carrier‑grade and enterprise network security design, troubleshooting and optimization.
+          </div>
+          <ul class="service-list">
+            <li>Firewall policy design (Cisco, SonicWall, Fortinet, Palo Alto)</li>
+            <li>IPSec VPN (route‑based & policy‑based), SSL VPN, secure remote access</li>
+            <li>Routing & switching: OSPF, BGP, MPLS, ISIS, EVPN, VXLAN</li>
+            <li>Traffic flow analysis and network fault isolation</li>
+            <li>QoS, NAT, AAA, RADIUS/TACACS+ integration</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🗄️</div>
+          <div class="service-title">Database Security & Virtual Patching</div>
+          <div class="service-sub">
+            Deep database security engineering, CVE analysis and virtual patching for critical data assets.
+          </div>
+          <ul class="service-list">
+            <li>Database vulnerability assessment and attack surface review</li>
+            <li>Virtual patch methodology and signature development</li>
+            <li>Reverse engineering of CVEs (IDA Pro, Ghidra, Oradiff)</li>
+            <li>Secure configuration review for Oracle, MSSQL, MySQL, PostgreSQL, DB2, SAP HANA, MongoDB</li>
+            <li>Policy enforcement and database attack mitigation strategies</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🤖</div>
+          <div class="service-title">AI Security, Red Teaming & LLM Safety</div>
+          <div class="service-sub">
+            Adversarial testing and safety evaluation for AI agents and large language models.
+          </div>
+          <ul class="service-list">
+            <li>LLM red teaming: impersonation, system leakage, authorization attacks</li>
+            <li>Information disclosure and privilege escalation testing</li>
+            <li>Secure prompt engineering and guardrail design</li>
+            <li>AI governance and risk mitigation advisory</li>
+            <li>RAG chatbot development using AWS Bedrock and knowledge bases</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🧬</div>
+          <div class="service-title">DevSecOps & Secure Engineering</div>
+          <div class="service-sub">
+            Security embedded into CI/CD pipelines, codebases and delivery workflows.
+          </div>
+          <ul class="service-list">
+            <li>Secure SDLC practices and defect reproduction</li>
+            <li>CI/CD pipeline security and automated build deployment (Jenkins)</li>
+            <li>Code review for C++, Java, Python with security focus</li>
+            <li>Reverse engineering and vulnerability research</li>
+            <li>Technical documentation and knowledge transfer for engineering teams</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🎓</div>
+          <div class="service-title">Cybersecurity Training & Workshops</div>
+          <div class="service-sub">
+            High‑engagement training for enterprises and academic institutions.
+          </div>
+          <ul class="service-list">
+            <li>Cybersecurity, Linux and networking fundamentals workshops</li>
+            <li>Cloud security training (AWS, Azure, GCP)</li>
+            <li>Database security and SIEM operations training</li>
+            <li>Curriculum design for M.Sc Cybersecurity programs</li>
+            <li>Mentoring and enablement for technical support and engineering teams</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">🛠️</div>
+          <div class="service-title">Technical Support & Escalation Consulting</div>
+          <div class="service-sub">
+            High‑severity incident handling and KPI‑driven support optimization.
+          </div>
+          <ul class="service-list">
+            <li>L3 support for SIEM, Database Security, NGFW and vulnerability management</li>
+            <li>RCA investigation, lab reproduction and fix validation</li>
+            <li>Backlog reduction, MTTR and CSAT improvement strategies</li>
+            <li>Emergency restoration of critical security products</li>
+            <li>Knowledge base creation and community support enablement</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title"><span>Technical</span> Domains & Frameworks</h2>
+
+      <div class="two-column">
+        <div>
+          <p class="text-muted">
+            Prashanth combines hands‑on engineering experience with global vendor ecosystems and modern security frameworks.
+            His background spans McAfee/Trellix Database Security and SIEM, Dell SonicWall NGFW, Juniper carrier‑grade routing,
+            Ericsson SmartEdge, and multi‑cloud security across AWS, Azure and GCP.
+          </p>
+          <br />
+          <ul class="service-list">
+            <li>Cyber Security & Risk: SIEM, vulnerability research, threat analysis, attack surface assessment</li>
+            <li>Database & Application Security: architecture, virtual patching, policy enforcement</li>
+            <li>Network & Infrastructure Security: routing, switching, firewall policy, secure remote access</li>
+            <li>Cloud Security: AWS, Azure, GCP, hybrid connectivity and traffic management</li>
+            <li>Compliance & Risk Coverage: GDPR, PCI‑DSS, HIPAA, CIS Benchmarks</li>
+            <li>Frameworks: ISO 27001, IEC 62443, NIS2, DORA, MITRE ATT&CK, OWASP Top 10</li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-label">Consultant</div>
+            <div class="contact-value">Prashanth B Pillai — Senior Network / Cyber / Cloud Security / AI Specialist</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Hamburg, Germany • Valid German Residence Permit</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Languages</div>
+            <div class="contact-value">English (C1), German (C1), Hindi (C1), Malayalam (C2)</div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Certifications (Selected)</div>
+            <div class="contact-value">
+              AWS Certified Solutions Architect – Associate • AWS & Azure Cloud Practitioner / Administrator • ISC2 Certified in Cybersecurity •
+              CISSP training • VMware VCP • Juniper JNCIS/JNCIA • Cisco CCNP/CCNA • CEH (training)
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">
+              <a href="https://www.linkedin.com/in/prashanthbpillai" target="_blank" rel="noopener">
+                linkedin.com/in/prashanthbpillai
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-label">About</div>
+      <h2 class="section-title"><span>Profile</span> & Mission</h2>
+      <p class="text-muted">
+        Prashanth’s Cybersecurity & Network Consulting LLC is built on over 15 years of hands‑on experience in securing
+        complex enterprise environments. From carrier‑grade networks and global security products to modern cloud and AI
+        infrastructures, Prashanth’s mission is to transform complex security challenges into clear, actionable strategies
+        that protect business continuity and enable innovation.
+      </p>
+      <br />
+      <p class="text-muted">
+        Career objective: to contribute deep technical judgment and problem‑solving capability to roles and engagements
+        focused on architecting and protecting systems, data and business continuity at scale — with a strong emphasis on
+        collaboration, clarity and long‑term resilience.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title"><span>Engage</span> With Prashanth</h2>
+
+      <div class="two-column">
+        <div>
+          <p class="text-muted">
+            For consulting engagements, training programs or long‑term security architecture projects, you can reach out
+            directly via email or phone. Remote and hybrid engagements across Europe, North America and global clients are
+            welcome.
+          </p>
+          <br />
+          <ul class="service-list">
+            <li>Security posture assessments and architecture reviews</li>
+            <li>Project‑based consulting for cloud, network, database and AI security</li>
+            <li>Retainer‑style advisory for CISOs, security leads and engineering teams</li>
+            <li>Custom training and enablement programs for technical staff</li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:pbpillai83@gmail.com">pbpillai83@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">
+              <a href="tel:+4915510520452">+49 1551 0520452</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">
+              <a href="https://www.linkedin.com/in/prashanthbpillai" target="_blank" rel="noopener">
+                linkedin.com/in/prashanthbpillai
+              </a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-label">Availability</div>
+            <div class="contact-value">Available immediately • Freelance / Contract / Project‑based</div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> PCNC LLC. All rights reserved.
+    <span>© <span id="year"></span> Prashanth’s Cybersecurity & Network Consulting LLC. All rights reserved.</span>
+    <span>Neon‑themed cyber aesthetic • Designed for GitHub Pages / static hosting.</span>
   </footer>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
