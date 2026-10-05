@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <div class="lang-switch">
+  <a href="index.html">EN</a> | 
+  <a href="index-de.html">DE</a>
+</div>
+
   <meta charset="UTF-8" />
   <title>Prashanth’s Cybersecurity & Network Consulting LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -447,6 +452,23 @@
         flex-wrap: wrap;
       }
     }
+    .lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+.lang-switch a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  text-shadow: 0 0 8px var(--neon-cyan);
+}
+
   </style>
 </head>
 <body>
